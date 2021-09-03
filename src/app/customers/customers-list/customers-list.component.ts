@@ -7,11 +7,22 @@ import { ICustomer } from "src/app/shared/interfaces";
     templateUrl: './customers-list.component.html'
 })
 export class CustomersListComponent implements OnInit {
-    filteredCustomers: ICustomer[] = [];
+    filteredCustomers: any[] = [];
     customersOrderTotal!: number;
     currencyCode: string = 'USD';
 
     constructor() {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        
+    }
+
+    /*
+    calculateOrders() {
+        this.customersOrderTotal = 0;
+        this.filteredCustomers.forEach((cust: ICustomer) => {
+            this.customersOrderTotal += cust.orderTotal;
+        });
+    }
+    */
 }
